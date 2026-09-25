@@ -1,0 +1,138 @@
+\documentclass{sice-si}
+
+\def\LuaLaTeX{Lua\LaTeX}
+\def\upLaTeX{up\LaTeX}
+\def\pTeX{p\TeX}
+\def\SICEcls{sice.cls}
+
+\newcommand{\TeXEngine}{unknown}
+\ifluatex
+    \renewcommand{\TeXEngine}{\LuaLaTeX}
+\else
+    \ifuptex
+        \renewcommand{\TeXEngine}{\upLaTeX}
+    \fi
+\fi
+
+% 参考文献の設定（BibLaTeXを使用する場合）
+\addbibresource{references.bib}
+
+% タイトルと著者名
+\title{SICE SI 予稿原稿の書き方（サンプル）} % 和文タイトル
+\name{○計測 太郎（計測自動制御学会），制御 花子（計測自動制御学会）} % 著者名
+\etitle{Instruction for SICE SI Annual Conference Manuscript} % 英文タイトル
+\ename{○Taro KEISOKU (SICE), and Hanako SEIGYO (SICE)}	%著者名（英）
+
+\begin{document}
+% アブストラクト
+\abst{
+    This manuscript describes a method for preparing a manuscript for the annual conference of the SICE SI division.
+    This file is built with \TeXEngine.
+}
+
+% タイトルの出力
+\maketitle
+
+% 本文
+\section{緒言}
+本稿ではSICE SI部門講演会の予稿原稿を作成するための説明を行います．
+SIでは予稿原稿としてPDFファイル形式のファイルを電子投稿していただく事を原則とさせていただいております．
+ただし，電子化やネットワーク接続が困難な場合には個別に対応させていただきますので，プログラム委員会までご相談下さい．
+
+\section{原稿作成方法}
+\subsection{原稿枚数，ファイル形式とファイル容量}
+原稿は1講演につき1ページから最大6ページとなります（キーノート講演も同様です）．
+提出していただく原稿のファイル形式は原則としてPDF 形式といたします．
+PDF 形式とすることが不可能な場合には，プログラム委員会にご連絡ください．
+また，原稿完成時のファイルサイズはPDF 形式で2MB 程度を上限の目安とさせていただきます．
+原稿送付時にはそれ以上でも受け付け可能な場合がありますが，その場合には全体の原稿の総容量により再提出をお願いする場合がありますので，ご了承下さい．
+本テンプレートには，.latexmkrcファイルを用意していますので，build時はlatexmkコマンドを使用してください．
+
+\subsection{用紙サイズ，書式など}
+\subsubsection{原稿の体裁}
+用紙サイズはA4版(縦297mm$\times$横210mm)とし，余白部分は左右15mm，上20mm，下27mmを確保してください．（プログラム委員会でヘッダ・フッダ部分に情報を追加する予定ですので，ご注意ください．）
+よって，原稿作成領域は250mm$\times$180mmの枠内となります．
+
+\subsubsection{基本書式}
+原稿の記載内容は，下記の順序とします．
+\begin{enumerate}[label=\arabic*), labelsep=1em]
+    \item 和文題目（英文原稿の場合には不要，16ptゴシックフォント推奨，センタリング）
+    \item 和文著者名・所属（英文原稿の場合には不要，12pt明朝フォント推奨，センタリング，登壇者に○を付加）
+    \item 英文題目（16pt TeX Gyre Termes Bold推奨，センタリング）
+    \item 英文著者名・所属（12pt TeX Gyre Termes推奨，センタリング，登壇者に○を付加）
+    \item 英文アブストラクト（9pt TeX Gyre Termes推奨，3 〜 5行程度，文章両側を10mm程度インデント）
+    \item 本文（本文文章は10pt明朝フォント推奨，小見出しは12 〜 10pt程度のゴシックフォント推奨）
+    \item 参考文献（10pt明朝フォント推奨）
+\end{enumerate}
+\subsubsection{図と表について}
+予稿はPDFファイルとなりますので，図や表はカラーで作成していただいても構いません．
+
+ただしファイルサイズの制限にご注意ください．
+図のキャプションは図の下に \Fig{fig:sample}とし，サブキャプションは \Fig{fig:figure1}，\Fig{fig:figure2}という具合にしてください．
+また，表のキャプションは表の上に \Table{tab:sample}，Table 2という具合にお付けください．（英語表記，フォントは10pt TeX Gyre Termes推奨）
+
+\begin{figure}[tb]
+    \centering
+    \begin{minipage}{.5 \linewidth}
+        \centering
+        \includegraphics[width=.8 \linewidth]{figures/dummy.pdf}
+        \subcaption{Figure 1 : pdf file}
+        \label{fig:figure1}
+    \end{minipage}%
+    \begin{minipage}{.5 \linewidth}
+        \centering
+        \includegraphics[width=.8 \linewidth]{figures/dummy.png}
+        \subcaption{Figure 2 : png file}
+        \label{fig:figure2}
+    \end{minipage}
+    \caption{Sample Figure}
+    \label{fig:sample}
+\end{figure}
+
+\begin{table}[tb]
+    \centering
+    \caption{Sample Table}
+    \label{tab:sample}
+    \begin{tabular}{c|c}
+        Column 1 & Column 2 \\
+        \hline
+        \hline
+        Data 1   & Data 2   \\
+        \hline
+        Data 3   & Data 4   \\
+    \end{tabular}
+\end{table}
+
+
+\section{結言}
+本稿はあくまでも予稿原稿を作成するためのガイドラインを示したものです．改行幅やフォントの設定などについては，原稿の内容や量に合わせて適宜判断していただき，原稿を作成してください．
+また，本稿はSICE-SIの予稿原稿の書き方 \cite{cite:SI,cite:SIbook,cite:SIproc,cite:WebPage}を参考に，\TeX 用書式を用意したものです．
+
+
+% 参考文献（BibTeXを使用しない場合）
+% \begin{thebibliography}{99}
+%     \bibitem{SI}
+%     計測太郎，制御花子: 
+%     SICE SI予稿原稿の書き方（サンプル）,
+%     計測自動制御学会論文集,
+%     00.0,
+%     pp. 0000--0000 (2025)
+%     \bibitem{SIbook}
+%     計測太郎，制御花子: 
+%     SICE SI予稿原稿の書き方（サンプル本）,
+%     計測自動制御学会, (2023)
+%     \bibitem{SIproc}
+%     計測太郎，制御花子: 
+%     SICE SI予稿原稿の書き方（サンプル会議録）,
+%     計測自動制御学会SI部門講演会SICE-SI予稿集
+%     (2023),
+%     pp. 0000--0000 
+%     \bibitem{WebPage}
+%     計測自動制御学会：
+%     計測自動制御学会ホームページ，
+%     https://www.sice.or.jp/ (2023)
+% \end{thebibliography}
+
+\printbibliography[title=参考文献]
+
+\end{document}

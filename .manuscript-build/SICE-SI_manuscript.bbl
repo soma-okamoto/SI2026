@@ -1,0 +1,103 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global/global}
+  \entry{okamoto2026mask}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=OS}{%
+         family={Okamoto},
+         familyi={O\bibinitperiod},
+         given={Soma},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Sekiyama},
+         familyi={S\bibinitperiod},
+         given={Kosuke},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OSSK1}
+    \strng{fullhash}{OSSK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3390/electronics15081653
+    \endverb
+    \field{eid}{1653}
+    \field{number}{8}
+    \field{title}{A Target-Oriented Shared-Control Framework for Adaptive
+  Spatial and Kinematic Support in Mixed Reality Teleoperation}
+    \field{volume}{15}
+    \field{journaltitle}{Electronics}
+    \field{year}{2026}
+  \endentry
+
+  \entry{julier1997ci}{inproceedings}{}{}
+    \name{author}{2}{}{%
+      {{hash=JSJ}{%
+         family={Julier},
+         familyi={J\bibinitperiod},
+         given={Simon\bibnamedelima J.},
+         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=UJK}{%
+         family={Uhlmann},
+         familyi={U\bibinitperiod},
+         given={Jeffrey\bibnamedelima K.},
+         giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JSJUJK1}
+    \strng{fullhash}{JSJUJK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 1997 American Control Conference}
+    \verb{doi}
+    \verb 10.1109/ACC.1997.609105
+    \endverb
+    \field{pages}{2369\bibrangedash 2373}
+    \field{title}{A Non-divergent Estimation Algorithm in the Presence of
+  Unknown Correlations}
+    \field{volume}{4}
+    \field{year}{1997}
+  \endentry
+
+  \entry{mahalanobis1936distance}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=MPC}{%
+         family={Mahalanobis},
+         familyi={M\bibinitperiod},
+         given={Prasanta\bibnamedelima Chandra},
+         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MPC1}
+    \strng{fullhash}{MPC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{49\bibrangedash 55}
+    \field{title}{On the Generalised Distance in Statistics}
+    \field{volume}{2}
+    \field{journaltitle}{Proceedings of the National Institute of Sciences of
+  India}
+    \field{year}{1936}
+  \endentry
+\enddatalist
+\endinput
