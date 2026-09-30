@@ -16,15 +16,15 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.\hskip 1em\relax }局所適応レジストレーションシステム}{1}{section.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces System overview of the local adaptive registration}}{1}{figure.caption.2}\protected@file@percent }
 \newlabel{fig:system_overview}{{2}{1}{System overview of the local adaptive registration}{figure.caption.2}{}}
-\newlabel{fig:method_prior}{{3(a)}{1}{MR manipulation and robot kinematics}{figure.caption.3}{}}
-\newlabel{sub@fig:method_prior}{{(a)}{1}{MR manipulation and robot kinematics}{figure.caption.3}{}}
-\newlabel{fig:method_meta}{{3(b)}{1}{Physical observation by Meta}{figure.caption.3}{}}
-\newlabel{sub@fig:method_meta}{{(b)}{1}{Physical observation by Meta}{figure.caption.3}{}}
+\newlabel{fig:method_prior}{{3(a)}{1}{User and robot operation}{figure.caption.3}{}}
+\newlabel{sub@fig:method_prior}{{(a)}{1}{User and robot operation}{figure.caption.3}{}}
+\newlabel{fig:method_meta}{{3(b)}{1}{Physical observation}{figure.caption.3}{}}
+\newlabel{sub@fig:method_meta}{{(b)}{1}{Physical observation}{figure.caption.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Information used for local adaptive registration}}{1}{figure.caption.3}\protected@file@percent }
 \newlabel{fig:method_overview}{{3}{1}{Information used for local adaptive registration}{figure.caption.3}{}}
-\citation{julier1997ci}
-\abx@aux@cite{0}{julier1997ci}
-\abx@aux@segm{0}{0}{julier1997ci}
+\citation{ajgl2022ci_partial}
+\abx@aux@cite{0}{ajgl2022ci_partial}
+\abx@aux@segm{0}{0}{ajgl2022ci_partial}
 \@writefile{toc}{\contentsline {section}{\numberline {3.\hskip 1em\relax }事前位置分布の構成}{2}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1\hskip 1em\relax }位置情報の定義と座標系の統一}{2}{subsection.3.1}\protected@file@percent }
 \newlabel{eq:operation-error-model}{{1}{2}{}{equation.1}{}}
@@ -32,18 +32,18 @@
 \newlabel{eq:learned-input-dist}{{3}{2}{}{equation.3}{}}
 \newlabel{eq:inputs}{{4}{2}{}{equation.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2\hskip 1em\relax }共分散交差法による事前分布の構成}{2}{subsection.3.2}\protected@file@percent }
-\newlabel{eq:prior-cov}{{5}{2}{}{equation.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Chunk division of the point cloud obtained from Meta}}{2}{figure.caption.4}\protected@file@percent }
 \newlabel{fig:meta_chunk_method}{{4}{2}{Chunk division of the point cloud obtained from Meta}{figure.caption.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Selection of the point cloud region corresponding to the task environment}}{2}{figure.caption.5}\protected@file@percent }
 \newlabel{fig:meta_task_region}{{5}{2}{Selection of the point cloud region corresponding to the task environment}{figure.caption.5}{}}
+\newlabel{eq:prior-cov}{{5}{2}{}{equation.5}{}}
 \newlabel{eq:prior-mean}{{6}{2}{}{equation.6}{}}
 \newlabel{eq:prior}{{7}{2}{}{equation.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.\hskip 1em\relax }Place後の観測による位置推定}{2}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1\hskip 1em\relax }複数フレームによる観測候補の構成}{2}{subsection.4.1}\protected@file@percent }
-\citation{mahalanobis1936distance}
-\abx@aux@cite{0}{mahalanobis1936distance}
-\abx@aux@segm{0}{0}{mahalanobis1936distance}
+\citation{orou_mousse2023localization_uncertainty}
+\abx@aux@cite{0}{orou_mousse2023localization_uncertainty}
+\abx@aux@segm{0}{0}{orou_mousse2023localization_uncertainty}
 \newlabel{fig:meta_pointcloud_raw}{{6(a)}{3}{Raw point cloud}{figure.caption.6}{}}
 \newlabel{sub@fig:meta_pointcloud_raw}{{(a)}{3}{Raw point cloud}{figure.caption.6}{}}
 \newlabel{fig:meta_pointcloud_chunk}{{6(b)}{3}{Point cloud after region selection}{figure.caption.6}{}}
@@ -63,7 +63,7 @@
 \newlabel{eq:weights}{{16}{3}{}{equation.16}{}}
 \newlabel{eq:place-cov-obs}{{17}{3}{}{equation.17}{}}
 \newlabel{eq:place-mean-obs}{{18}{3}{}{equation.18}{}}
-\newlabel{eq:posterior}{{19}{3}{}{equation.19}{}}
+\newlabel{eq:posterior}{{19}{4}{}{equation.19}{}}
 \newlabel{eq:ci-weight-prior}{{20}{4}{}{equation.20}{}}
 \newlabel{eq:ci-weight-obs}{{21}{4}{}{equation.21}{}}
 \newlabel{fig:prior_post_gazebo}{{7(a)}{4}{Robot model in Gazebo}{figure.caption.7}{}}
@@ -81,26 +81,30 @@
 \newlabel{eq:used-observation}{{24}{4}{}{equation.24}{}}
 \newlabel{eq:operation-observation-error}{{25}{4}{}{equation.25}{}}
 \newlabel{eq:error-decomposition}{{26}{4}{}{equation.26}{}}
-\newlabel{eq:error-zero-mean}{{27}{5}{}{equation.27}{}}
-\newlabel{eq:error-expectation}{{28}{5}{}{equation.28}{}}
-\newlabel{eq:bias-update}{{29}{5}{}{equation.29}{}}
-\newlabel{eq:residual}{{30}{5}{}{equation.30}{}}
-\newlabel{eq:residual-cov}{{31}{5}{}{equation.31}{}}
-\newlabel{eq:operation-error-cov}{{32}{5}{}{equation.32}{}}
-\newlabel{eq:used-cov-mean}{{33}{5}{}{equation.33}{}}
-\newlabel{eq:cov-update}{{34}{5}{}{equation.34}{}}
-\newlabel{eq:kl-index}{{35}{5}{}{equation.35}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Representative Regression Test Results}}{5}{table.caption.9}\protected@file@percent }
-\newlabel{tab:regression_test}{{1}{5}{Representative Regression Test Results}{table.caption.9}{}}
+\newlabel{eq:bias-update}{{27}{4}{}{equation.27}{}}
+\newlabel{eq:residual}{{28}{4}{}{equation.28}{}}
+\newlabel{eq:operation-error-cov}{{29}{4}{}{equation.29}{}}
+\citation{nawa2024kld_multivariate}
+\abx@aux@cite{0}{nawa2024kld_multivariate}
+\abx@aux@segm{0}{0}{nawa2024kld_multivariate}
+\newlabel{eq:cov-update}{{30}{5}{}{equation.30}{}}
+\newlabel{eq:cov-regularization}{{31}{5}{}{equation.31}{}}
+\newlabel{eq:kl-index}{{32}{5}{}{equation.32}{}}
+\newlabel{eq:kl-gaussian}{{33}{5}{}{equation.33}{}}
+\newlabel{eq:kl-average}{{34}{5}{}{equation.34}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {7.\hskip 1em\relax }実験・結果}{5}{section.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.1\hskip 1em\relax }検証方法}{5}{subsection.7.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Representative Regression Test Results}}{5}{table.caption.9}\protected@file@percent }
+\newlabel{tab:regression_test}{{1}{5}{Representative Regression Test Results}{table.caption.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.2\hskip 1em\relax }結果}{5}{subsection.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.\hskip 1em\relax }結言}{6}{section.8}\protected@file@percent }
-\abx@aux@read@bbl@mdfivesum{53E2CBB66BBFD19966BF29498F451F94}
+\@writefile{toc}{\contentsline {section}{\numberline {8.\hskip 1em\relax }結言}{5}{section.8}\protected@file@percent }
+\abx@aux@read@bbl@mdfivesum{9AABC0385068017813EDC068ED07D7AB}
 \abx@aux@defaultrefcontext{0}{okamoto2026mask}{none/global//global/global/global}
-\abx@aux@defaultrefcontext{0}{julier1997ci}{none/global//global/global/global}
-\abx@aux@defaultrefcontext{0}{mahalanobis1936distance}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{ajgl2022ci_partial}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{orou_mousse2023localization_uncertainty}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{nawa2024kld_multivariate}{none/global//global/global/global}
 \abx@aux@defaultlabelprefix{0}{okamoto2026mask}{}
-\abx@aux@defaultlabelprefix{0}{julier1997ci}{}
-\abx@aux@defaultlabelprefix{0}{mahalanobis1936distance}{}
-\gdef \@abspage@last{6}
+\abx@aux@defaultlabelprefix{0}{ajgl2022ci_partial}{}
+\abx@aux@defaultlabelprefix{0}{orou_mousse2023localization_uncertainty}{}
+\abx@aux@defaultlabelprefix{0}{nawa2024kld_multivariate}{}
+\gdef \@abspage@last{5}

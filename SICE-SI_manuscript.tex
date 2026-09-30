@@ -83,14 +83,14 @@ Place後に用いる物理観測の概要を\Fig{fig:method_overview}に示す�
     \centering
     \begin{minipage}{.5\linewidth}
         \centering
-        \includegraphics[width=.95\linewidth]{figures/Method1.pdf}
-        \subcaption{MR manipulation and robot kinematics}
+        \includegraphics[width=.65\linewidth]{figures/pred_P.pdf}
+        \subcaption{User and robot operation}
         \label{fig:method_prior}
     \end{minipage}%
     \begin{minipage}{.5\linewidth}
         \centering
-        \includegraphics[width=.95\linewidth]{figures/Method2.pdf}
-        \subcaption{Physical observation by Meta}
+        \includegraphics[width=.65\linewidth]{figures/post_P.pdf}
+        \subcaption{Physical observation}
         \label{fig:method_meta}
     \end{minipage}
     \caption{Information used for local adaptive registration}
@@ -170,7 +170,7 @@ $\Sigma_{\mathrm{current}}$，$\Sigma_{\mathrm{tf}}$が
 以下，逆行列を用いる共分散は正定値として扱う．
 
 \subsection{共分散交差法による事前分布の構成}
-両位置情報の誤差の相互相関は不明であるため，共分散交差法（Covariance Intersection: CI）\cite{julier1997ci}を用いる．事前位置と共分散を
+両位置情報の誤差の相互相関は不明であるため，共分散交差法（Covariance Intersection: CI）\cite{ajgl2022ci_partial}を用いる．事前位置と共分散を
 \begin{equation}
 \Sigma_{\mathrm{pred}}^{-1}
  =\omega\Sigma_{\mathrm{current}}^{-1}
@@ -278,7 +278,7 @@ v_{s,j}^{(t)} &\sim \mathcal{N}(0,R_{s,j}^{(t)})
 $\sigma_{\max}$を設け，上限を超える候補は無効とする．
 
 \subsection{事前予測および観測間の整合度}
-事前予測と各候補との不整合を，マハラノビス距離\cite{mahalanobis1936distance}の二乗$d^{2}_{s,j}$と整合度$l_{s,j}$により
+事前予測と各候補との不整合を，マハラノビス距離\cite{orou_mousse2023localization_uncertainty}の二乗$d^{2}_{s,j}$と整合度$l_{s,j}$により
 \begin{equation}
 \begin{aligned}
 v_{s,j}&=z_{s,j}-P_{\mathrm{pred}},\\
@@ -405,18 +405,10 @@ $\mathcal{A}=\varnothing$，$\omega_0=1$として事前分布を採用する．
 $\mathcal{A}=\varnothing$，$\omega_0=1$として事前分布を採用する．
 \end{enumerate}
 
-未検出などで観測が無効な場合も同じ規則を適用する．
-一方のみの採用では
-$P_{\mathrm{place}}=P_s$，
-$\Sigma_{\mathrm{place}}=R_s$となる．
-有効観測が存在しない場合，または観測が競合し
-不確かさから優劣を決定できない場合には，
-$P_{\mathrm{place}}=P_{\mathrm{pred}}$，
-$\Sigma_{\mathrm{place}}=\Sigma_{\mathrm{pred}}$となる．
-事前分布および観測後分布の可視化例を
-\Fig{fig:prior_posterior}に示す．
-\vspace{-10pt}
-\begin{figure}[H]
+
+\vspace{10pt}
+\noindent\begin{minipage}{\linewidth}
+    \captionsetup{type=figure}
     \centering
     \begin{minipage}{.5\linewidth}
         \centering
@@ -432,18 +424,30 @@ $\Sigma_{\mathrm{place}}=\Sigma_{\mathrm{pred}}$となる．
     \end{minipage}
     \caption{Visualization of the prior and post-observation position distributions}
     \label{fig:prior_posterior}
-\end{figure}
-\vspace{-20pt}
-三次元共分散楕円体の拡大表示を\Fig{fig:prior_posterior_ellipsoid}に示す．
-青色は事前分布，赤色は観測後分布を表す．
-\vspace{-10pt}
-\begin{figure}[H]
+\end{minipage}
+\vspace{2pt}
+
+\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+    \captionsetup{type=figure}
     \centering
-    \includegraphics[width=.5\linewidth]{figures/Prior_Post_Rviz2_big.pdf}
+    \includegraphics[width=.45\linewidth]{figures/Prior_Post_Rviz2_big.pdf}
     \caption{Covariance ellipsoids of the prior and post-observation distributions}
     \label{fig:prior_posterior_ellipsoid}
-\end{figure}
-\vspace{-10pt}
+\end{minipage}
+未検出などで観測が無効な場合も同じ規則を適用する．
+一方のみの採用では
+$P_{\mathrm{place}}=P_s$，
+$\Sigma_{\mathrm{place}}=R_s$となる．
+有効観測が存在しない場合，または観測が競合し
+不確かさから優劣を決定できない場合には，
+$P_{\mathrm{place}}=P_{\mathrm{pred}}$，
+$\Sigma_{\mathrm{place}}=\Sigma_{\mathrm{pred}}$となる．
+事前分布および観測後分布の可視化例を
+\Fig{fig:prior_posterior}に示す．
+三次元共分散楕円体の拡大表示を\Fig{fig:prior_posterior_ellipsoid}に示す．
+青色は事前分布，赤色は観測後分布を表す．
+\vspace{8pt}
 
 \section{MRボトルの局所補正}
 $P_{\mathrm{place}}$と$P_{\mathrm{current}}$を，同一座標系のボトル中心位置として表した上で，補正量と補正後の位置を
@@ -460,8 +464,6 @@ P_{\mathrm{registered}}=P_{\mathrm{current}}+\lambda\Delta P,
 
 補正後の中心位置をMR表示座標へ変換し，Place操作の対象ボトルに適用することで，観測された実ボトル位置へ局所的に再整合する．補正対象は当該ボトルの並進位置であり，姿勢や他の物体，SLAM地図全体は変更しない．
 
-$\Delta P$には，空間的な位置ずれに加え，滑りや接触による実物体と仮想物体の挙動差も含まれ得る．したがって，位置差のみからその内訳を断定しない．また，局所補正が成立しても，周囲の物体やロボットの位置推定誤差まで解消されたことを意味しない．
-
 \section{誤差特性の逐次更新}
 試行$t$で実際に位置推定に使用した物理観測を
 \begin{equation}
@@ -469,15 +471,7 @@ q_{\mathrm{used}}^{(t)}(x)
 =\mathcal{N}(x;\bar z_{\mathrm{used}}^{(t)},R_{\mathrm{used}}^{(t)})
 \label{eq:used-observation}
 \end{equation}
-と定義する．ここで，$\bar z_{\mathrm{used}}^{(t)}$は試行$t$で
-実際に使用した物理観測の代表位置，$R_{\mathrm{used}}^{(t)}$は
-その観測共分散である．採用される観測集合
-$\mathcal{A}^{(t)}$は試行ごとに異なり，
-$\{Y\}$，$\{M\}$，$\{Y,M\}$のいずれかとなる．
-したがって，$\bar z_{\mathrm{used}}^{(t)}$および
-$R_{\mathrm{used}}^{(t)}$も試行ごとに変化する．
-片方のみを採用した場合はその観測を用い，両観測を融合した場合は，
-その試行で位置推定に用いた融合観測を誤差特性更新に用いる．
+と定義する．$\bar z_{\mathrm{used}}^{(t)}$および$R_{\mathrm{used}}^{(t)}$は，試行$t$で採用した単一観測または融合観測の代表位置と共分散である．
 
 各操作情報$o\in\{\mathrm{current},\mathrm{tf}\}$について，
 操作情報と使用観測との差を
@@ -491,70 +485,42 @@ $\bar z_{\mathrm{used}}^{(t)}=x^{(t)}+v_{\mathrm{used}}^{(t)}$より，
 e_o^{(t)}=b_o+\epsilon_o^{(t)}-v_{\mathrm{used}}^{(t)}
 \label{eq:error-decomposition}
 \end{equation}
-となる．ここで
-\begin{equation}
-E[\epsilon_o^{(t)}]=0,\qquad E[v_{\mathrm{used}}^{(t)}]=0
-\label{eq:error-zero-mean}
-\end{equation}
-を仮定すると，
-\begin{equation}
-E[e_o^{(t)}]=b_o
-\label{eq:error-expectation}
-\end{equation}
-である．したがって，系統的バイアスは
+となる．ここで$E[\epsilon_o^{(t)}]=0$，$E[v_{\mathrm{used}}^{(t)}]=0$を仮定すると，$E[e_o^{(t)}]=b_o$である．したがって，系統的バイアスは
 \begin{equation}
 \hat b_o^{(n)}
 =\hat b_o^{(n-1)}
 +\frac{1}{n}\left(e_o^{(n)}-\hat b_o^{(n-1)}\right)
 \label{eq:bias-update}
 \end{equation}
-により逐次更新する．これは，これまでの平均誤差に，
-新しく得られた操作情報と物理観測との差を逐次反映することを表す．
-
-次に，バイアスを除いた残差を
+により逐次更新する．次に，バイアスを除いた残差を
 \begin{equation}
 r_o^{(t)}=e_o^{(t)}-\hat b_o
 \label{eq:residual}
 \end{equation}
-とし，その標本共分散を
-\begin{equation}
-C_o=\frac{1}{n-1}\sum_{t=1}^{n}
-r_o^{(t)}r_o^{(t)\mathsf T}
-\label{eq:residual-cov}
-\end{equation}
-とする．操作情報と物理観測との差には，操作情報側と観測側の
-両方のランダム誤差が含まれるため，
+とし，操作情報と物理観測との差には両方のランダム誤差が含まれるため，
 \begin{equation}
 \operatorname{Cov}[e_o^{(t)}]=\Sigma_o+R_{\mathrm{used}}^{(t)}
 \label{eq:operation-error-cov}
 \end{equation}
-と考える．観測共分散の平均を
+と考える．標本共分散$C_o$と観測共分散の平均$\overline R_{\mathrm{used}}$から
 \begin{equation}
-\overline{R}_{\mathrm{used}}
-=\frac{1}{n}\sum_{t=1}^{n}R_{\mathrm{used}}^{(t)}
-\label{eq:used-cov-mean}
-\end{equation}
-として，操作情報側のランダム誤差共分散を
-\begin{equation}
-\hat\Sigma_o=C_o-\overline{R}_{\mathrm{used}}
+\begin{aligned}
+C_o&=\frac{1}{n-1}\sum_{t=1}^{n}r_o^{(t)}r_o^{(t)\mathsf T},\\
+\overline R_{\mathrm{used}}&=\frac{1}{n}\sum_{t=1}^{n}R_{\mathrm{used}}^{(t)},\\
+\hat\Sigma_o&=C_o-\overline R_{\mathrm{used}}
+\end{aligned}
 \label{eq:cov-update}
 \end{equation}
-により推定する．式\eqref{eq:cov-update}では，標本数不足や数値誤差により
-負の固有値が生じる可能性があるため，共分散行列の対称化，
-最小分散の確保，負の固有値の小さな正値への置換などによって，
-有効な正定値または半正定値共分散を確保する必要がある．
-この数値安定化の具体的処理は今後設定する．
+によりランダム誤差共分散を推定する．数値誤差により負の固有値が生じる場合は，共分散行列の対称化や最小分散の確保により正定値または半正定値性を保つ．更新した$\hat b_o$および$\hat\Sigma_o$は，式\eqref{eq:bias-corrected-position}および式\eqref{eq:learned-input-dist}を通じて次試行の事前分布へ反映する．
+例えば，$\hat\Sigma_o=U\Lambda U^{\mathsf T}$と固有値分解した場合には
+\begin{equation}
+\hat\Sigma_o^{+}
+=U\max(\Lambda,\sigma_{\min}^{2}I)U^{\mathsf T}
+\label{eq:cov-regularization}
+\end{equation}
+として最小分散$\sigma_{\min}^{2}$を確保する．
 
-試行$t$で更新した$\hat b_o$および$\hat\Sigma_o$は，
-次試行$t+1$の事前分布$p_{\mathrm{pred}}^{(t+1)}$の構築に用いる．
-ここで学習するのは過去のPlace位置そのものではなく，
-CurrentとTFが持つ誤差特性である．
-したがって，過去位置の平均を次回位置として用いるのではなく，
-各情報源のバイアスとランダム誤差共分散を更新し，
-式\eqref{eq:bias-corrected-position}および式\eqref{eq:learned-input-dist}
-を通じて次試行の事前分布へ反映する．
-
-適応の進行を評価する指標として，今後は
+適応の進行を評価する指標として，分布間の差を測るKL情報量\cite{nawa2024kld_multivariate}を用い，今後は
 \begin{equation}
 D_{\mathrm{KL}}^{(t)}
 =D_{\mathrm{KL}}\left(
@@ -564,22 +530,30 @@ p_{\mathrm{post}}^{(t)}
 \right)
 \label{eq:kl-index}
 \end{equation}
-を用いる．ここで，$p_{\mathrm{pred}}^{(t)}$は物理観測前の事前分布，
-$p_{\mathrm{post}}^{(t)}$は物理観測を用いた更新後分布である．
-この指標は，$\mu_{\mathrm{pred}}$から$\mu_{\mathrm{post}}$への変化と，
-$\Sigma_{\mathrm{pred}}$から$\Sigma_{\mathrm{post}}$への変化をまとめて評価する．
-試行を繰り返すことで$D_{\mathrm{KL}}^{(t)}$が平均的に減少するかを調べることで，
-誤差特性の学習により，事前分布と物理観測後分布との差が小さくなる傾向を評価できる．
-ただし，本研究では独立な真値位置を直接測定していないため，
-KL情報量から真値に対する位置推定精度の向上を直接結論しない．
-本稿では，KL情報量を今後の定量評価方法として位置づける．
+を用いる．三次元ガウス分布$p_0=\mathcal{N}(\mu_0,\Sigma_0)$，$p_1=\mathcal{N}(\mu_1,\Sigma_1)$に対しては
+\begin{equation}
+\begin{aligned}
+D_{\mathrm{KL}}(p_0\parallel p_1)
+=\frac{1}{2}\{&
+\operatorname{tr}(\Sigma_1^{-1}\Sigma_0)
+ +(\mu_1-\mu_0)^{\mathsf T}\Sigma_1^{-1}(\mu_1-\mu_0)\\
+&-3+\ln\frac{\det\Sigma_1}{\det\Sigma_0}\}
+\end{aligned}
+\label{eq:kl-gaussian}
+\end{equation}
+で計算できる．さらに
+\begin{equation}
+\overline D_{\mathrm{KL}}(n)=\frac{1}{n}\sum_{t=1}^{n}D_{\mathrm{KL}}^{(t)}
+\label{eq:kl-average}
+\end{equation}
+の減少を調べることで，誤差特性の学習により事前分布と物理観測後分布との差が小さくなる傾向を評価する．ただし，独立な真値位置を直接測定していないため，真値に対する位置推定精度の向上は直接結論しない．
 
 \section{実験・結果}
 
 \subsection{検証方法}
 観測融合ノードの基本動作を確認するため，合成した三次元位置および共分散を入力する回帰テストを実施した．
 観測候補の選別，センサ間の整合・競合，観測欠損，不正な共分散，入力形式への対応を検証した．
-テストは19メソッドで構成し，\texttt{subTest}は別件として数えていない．
+テストは19メソッドで構成した．
 
 代表条件のうち，共分散上限制約の確認では
 $\sigma_{\max}=0.10$ mとした．
@@ -588,42 +562,35 @@ CIの重みを$\omega_Y=\omega_M=0.5$とした．
 理論上は融合後共分散のtraceを最小化するCI重みを用いるが，
 本回帰テストでは分岐動作の確認を目的として重みを固定した．
 
-また，回帰テストとは別にMR環境で動作確認を行い，推定結果が操作対象ボトルの表示位置更新へ反映されることを確認した．
-このMR環境での確認は，19件の回帰テストには含めていない．代表的な回帰テスト条件と結果を\Table{tab:regression_test}に示す．
-\begin{table}[tb]
+また，MR環境で推定結果が操作対象ボトルの表示位置更新へ反映されることを確認した．代表的な回帰テスト条件と結果を\Table{tab:regression_test}に示す．
+\begin{table}[H]
     \centering
     \caption{Representative Regression Test Results}
     \label{tab:regression_test}
-    \begin{tabular}{p{0.28\linewidth}|p{0.64\linewidth}}
+    \footnotesize
+    \begin{tabular}{p{0.24\linewidth}|p{0.68\linewidth}}
         Condition & Result \\
         \hline
         \hline
 
         観測整合 &
-        $P_Y=[0,0,0]$ m，$P_M=[0.01,0,0]$ m，
-        $\sigma_Y=\sigma_M=0.02$ mに対し，
-        $P_{\mathrm{place}}=[0.005,0,0]$ m，
-        $\Sigma_{\mathrm{place}}=0.0004I$ m$^2$となった．\\
+        $P_Y=[0,0,0]$ m，$P_M=[0.01,0,0]$ mで中間位置を出力した．\\
         \hline
 
         観測競合 &
-        観測位置を1 m離し，$\sigma=0.02$ mと0.06 mとした場合，
-        センサの割当てを入れ替えても，
-        $\operatorname{tr}(R)$が小さい0.02 m側を採用した．\\
+        1 m離れた2観測では，不確かさの小さい0.02 m側を採用した．\\
         \hline
 
         同一不確かさで競合 &
-        観測位置を1 m離し，双方を$\sigma=0.02$ mとした場合，
-        事前位置$[5,0,0]$ m，事前共分散$0.0025I$ m$^2$を出力した．\\
+        1 m離れ，双方が$\sigma=0.02$ mの場合，事前位置へフォールバックした．\\
         \hline
 
         有効観測なし &
-        有効な観測が存在しない場合，事前分布を出力した．\\
+        観測が存在しない場合，事前分布を出力した．\\
         \hline
 
         共分散上限制約 &
-        最大主軸標準偏差の上限を0.10 mとした場合，
-        $\sigma=0.20$ mの候補は位置が一致していても棄却した．\\
+        上限0.10 mに対し，$\sigma=0.20$ mの候補を棄却した．\\
         \hline
     \end{tabular}
 \end{table}
@@ -634,41 +601,12 @@ CIの重みを$\omega_Y=\omega_M=0.5$とした．
 一方，観測が競合し不確かさを区別できない条件および有効な観測が存在しない条件では，事前分布へフォールバックすることを確認した．
 また，設定した最大主軸標準偏差の上限を超える観測候補が棄却されることを確認した．
 
-別途行ったMR環境での動作確認では，推定結果に応じて操作対象ボトルの表示位置が更新されることを確認した．
-以上より，設定した条件に対する観測融合ノードの分岐動作と，推定結果をMR表示へ反映する基本動作を確認した．
-
-なお，本回帰テストの入力は合成データであり，ROS masterを介した実通信，実センサ，実タイマおよび実機環境における位置精度を検証したものではない．
-また，MR環境での確認についても，位置誤差や操作性の定量評価は行っていない．\texttt{unittest}全体の実行時間は0.086 sであったが，
-これは観測融合ノードの処理遅延やリアルタイム性能を示す値として扱わない．
-また，本回帰テストは誤差特性の逐次更新，次試行への反映，
-KL情報量による評価を検証したものではない．
-実環境における定量評価およびユーザテストは今後の課題とする．
-
 \section{結言}
-本稿では，Place後の物理観測に基づいて操作対象ボトルの
-MR表示位置を局所的に再整合する局所適応レジストレーション手法を提案した．
-MR操作情報とロボット運動学情報から事前分布を構成し，
-YOLO/RealSenseおよびMetaによる物理観測の安定性，
-センサ間整合性および不確かさに基づいて観測を選択・融合することで，
-Place後の対象位置を推定する構成を示した．
-また，操作情報と物理観測との差から誤差特性を逐次更新し，
-次試行の事前分布へ反映する理論を整理した．
+本稿では，Place後の物理観測に基づいて操作対象ボトルのMR表示位置を局所的に再整合する手法を提案した．MR操作情報とロボット運動学情報から事前分布を構成し，YOLO/RealSenseおよびMetaによる物理観測を安定性，整合性，不確かさに基づいて選択・融合することで，Place後の対象位置を推定する構成を示した．
 
-合成データを用いた観測融合ノードの回帰テストでは，
-19件中19件が成功し，設定した条件に対する観測の融合，
-競合時の選択，事前分布へのフォールバック，
-および不確かな観測の棄却が行われることを確認した．
-また，MR環境において，推定結果が操作対象ボトルの
-表示位置へ反映される基本動作を確認した．
+合成データを用いた回帰テストでは19件中19件が成功し，観測の融合，競合時の選択，事前分布へのフォールバック，不確かな観測の棄却が行われることを確認した．また，MR環境において，推定結果が操作対象ボトルの表示位置へ反映される基本動作を確認した．
 
-一方，本検証は合成データを中心とした基本動作の確認であり，
-実センサおよび実機環境における位置精度や，
-ユーザ操作への影響を定量的に評価したものではない．
-今後は，独立な基準位置に対する補正前後の位置誤差，
-観測共分散および整合性判定の妥当性，
-CIの重みと反映率$\lambda$の設定，誤差特性の逐次学習，
-およびKL情報量による適応の定量評価を検討するとともに，
-実環境での定量評価およびユーザテストを行う．
+本検証は合成データを中心とした基本動作の確認であり，実センサおよび実機環境における位置精度や，ユーザ操作への影響を定量的に評価したものではない．今後は，独立な基準位置に対する補正前後の位置誤差，観測共分散および整合性判定の妥当性，CI重みと反映率$\lambda$の設定，誤差特性の逐次学習，KL情報量による適応評価を検討するとともに，実環境での定量評価およびユーザテストを行う．
 
 \printbibliography[title=参考文献]
 \end{document}

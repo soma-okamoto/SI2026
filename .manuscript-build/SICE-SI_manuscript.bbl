@@ -48,56 +48,114 @@
     \field{year}{2026}
   \endentry
 
-  \entry{julier1997ci}{inproceedings}{}{}
+  \entry{ajgl2022ci_partial}{article}{}{}
     \name{author}{2}{}{%
-      {{hash=JSJ}{%
-         family={Julier},
-         familyi={J\bibinitperiod},
-         given={Simon\bibnamedelima J.},
-         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      {{hash=AJ}{%
+         family={Ajgl},
+         familyi={A\bibinitperiod},
+         given={Ji{\v{r}}{\'i}},
+         giveni={J\bibinitperiod},
       }}%
-      {{hash=UJK}{%
-         family={Uhlmann},
-         familyi={U\bibinitperiod},
-         given={Jeffrey\bibnamedelima K.},
-         giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+      {{hash=SO}{%
+         family={Straka},
+         familyi={S\bibinitperiod},
+         given={Ond{\v{r}}ej},
+         giveni={O\bibinitperiod},
       }}%
     }
-    \strng{namehash}{JSJUJK1}
-    \strng{fullhash}{JSJUJK1}
+    \strng{namehash}{AJSO1}
+    \strng{fullhash}{AJSO1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proceedings of the 1997 American Control Conference}
     \verb{doi}
-    \verb 10.1109/ACC.1997.609105
+    \verb 10.1016/j.automatica.2022.110168
     \endverb
-    \field{pages}{2369\bibrangedash 2373}
-    \field{title}{A Non-divergent Estimation Algorithm in the Presence of
-  Unknown Correlations}
-    \field{volume}{4}
-    \field{year}{1997}
+    \field{eid}{110168}
+    \field{title}{Covariance Intersection Fusion with Element-Wise Partial
+  Knowledge of Correlation}
+    \field{volume}{139}
+    \field{journaltitle}{Automatica}
+    \field{year}{2022}
   \endentry
 
-  \entry{mahalanobis1936distance}{article}{}{}
-    \name{author}{1}{}{%
-      {{hash=MPC}{%
-         family={Mahalanobis},
+  \entry{orou_mousse2023localization_uncertainty}{article}{}{}
+    \name{author}{5}{}{%
+      {{hash=OMC}{%
+         family={Orou\bibnamedelima Mousse},
+         familyi={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Charifou},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Benrabah},
+         familyi={B\bibinitperiod},
+         given={Mohamed},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MF}{%
+         family={Marmoiton},
          familyi={M\bibinitperiod},
-         given={Prasanta\bibnamedelima Chandra},
-         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+         given={Fran{\c{c}}ois},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=WA}{%
+         family={Wilhelm},
+         familyi={W\bibinitperiod},
+         given={Alexis},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Chapuis},
+         familyi={C\bibinitperiod},
+         given={Roland},
+         giveni={R\bibinitperiod},
       }}%
     }
-    \strng{namehash}{MPC1}
-    \strng{fullhash}{MPC1}
+    \strng{namehash}{OMC+1}
+    \strng{fullhash}{OMCBMMFWACR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{number}{1}
-    \field{pages}{49\bibrangedash 55}
-    \field{title}{On the Generalised Distance in Statistics}
-    \field{volume}{2}
-    \field{journaltitle}{Proceedings of the National Institute of Sciences of
-  India}
-    \field{year}{1936}
+    \verb{doi}
+    \verb 10.3390/s23167237
+    \endverb
+    \field{eid}{7237}
+    \field{number}{16}
+    \field{title}{A Framework for Optimal Navigation in Situations of
+  Localization Uncertainty}
+    \field{volume}{23}
+    \field{journaltitle}{Sensors}
+    \field{year}{2023}
+  \endentry
+
+  \entry{nawa2024kld_multivariate}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=NV}{%
+         family={Nawa},
+         familyi={N\bibinitperiod},
+         given={Victor},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=NS}{%
+         family={Nadarajah},
+         familyi={N\bibinitperiod},
+         given={Saralees},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NVNS1}
+    \strng{fullhash}{NVNS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3390/e26080663
+    \endverb
+    \field{eid}{663}
+    \field{number}{8}
+    \field{title}{Exact Expressions for Kullback--Leibler Divergence for
+  Multivariate and Matrix-Variate Distributions}
+    \field{volume}{26}
+    \field{journaltitle}{Entropy}
+    \field{year}{2024}
   \endentry
 \enddatalist
 \endinput

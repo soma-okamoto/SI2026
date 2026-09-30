@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex .manuscript-build/SICE-SI_manuscript"] 1790676138.71162 ".manuscript-build/SICE-SI_manuscript.aux" ".manuscript-build/SICE-SI_manuscript.bbl" ".manuscript-build/SICE-SI_manuscript" 1790676149.86544 0
-  "./manuscript_references.bib" 1790662497 1109 0b6d4f60cd0402e190220014799468de ""
-  ".manuscript-build/SICE-SI_manuscript-blx.bib" 1790676146 343 bf1f0c75b5bafd473925320ac9611e26 "lualatex"
-  ".manuscript-build/SICE-SI_manuscript.aux" 1790676146 9048 e986e386a5a1e7f5d43f2edd75185cf0 "lualatex"
+["bibtex .manuscript-build/SICE-SI_manuscript"] 1790743948.80528 ".manuscript-build/SICE-SI_manuscript.aux" ".manuscript-build/SICE-SI_manuscript.bbl" ".manuscript-build/SICE-SI_manuscript" 1790743958.32084 0
+  "./manuscript_references.bib" 1790740528 1615 19122d5dc54c492d6021ec65043d8cc2 ""
+  ".manuscript-build/SICE-SI_manuscript-blx.bib" 1790743955 343 bf1f0c75b5bafd473925320ac9611e26 "lualatex"
+  ".manuscript-build/SICE-SI_manuscript.aux" 1790743955 9334 d0afc725b73cb2ba939feeec6f0a8724 "lualatex"
   "c:/texlive/2024/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1738639194 65510 b1f696b0241395385f422f67543c37fd ""
   (generated)
   ".manuscript-build/SICE-SI_manuscript.bbl"
   ".manuscript-build/SICE-SI_manuscript.blg"
   (rewritten before read)
-["lualatex"] 1790676139.28133 "SICE-SI_manuscript.tex" ".manuscript-build/SICE-SI_manuscript.pdf" "SICE-SI_manuscript" 1790676149.86649 0
-  ".manuscript-build/SICE-SI_manuscript.aux" 1790676146 9048 e986e386a5a1e7f5d43f2edd75185cf0 "lualatex"
-  ".manuscript-build/SICE-SI_manuscript.bbl" 1790676139 2983 53e2cbb66bbfd19966bf29498f451f94 "bibtex .manuscript-build/SICE-SI_manuscript"
-  ".manuscript-build/SICE-SI_manuscript.out" 1790676146 1896 72045ca8a7682a593f7a7b6525d44156 "lualatex"
-  ".manuscript-build/SICE-SI_manuscript.run.xml" 1790676146 2755 38956f63bdc18c3a7ee1ce4aef2a42b5 "lualatex"
+["lualatex"] 1790743949.28911 "SICE-SI_manuscript.tex" ".manuscript-build/SICE-SI_manuscript.pdf" "SICE-SI_manuscript" 1790743958.3222 0
+  ".manuscript-build/SICE-SI_manuscript.aux" 1790743955 9334 d0afc725b73cb2ba939feeec6f0a8724 "lualatex"
+  ".manuscript-build/SICE-SI_manuscript.bbl" 1790743949 4345 9aabc0385068017813edc068ed07d7ab "bibtex .manuscript-build/SICE-SI_manuscript"
+  ".manuscript-build/SICE-SI_manuscript.out" 1790743955 1896 72045ca8a7682a593f7a7b6525d44156 "lualatex"
+  ".manuscript-build/SICE-SI_manuscript.run.xml" 1790743955 2755 38956f63bdc18c3a7ee1ce4aef2a42b5 "lualatex"
   ".texmf-var/luatex-cache/generic/fonts/otl/haranoajigothic-medium.luc" 1790674644 1924607 13aa05eb49a046acb60a3919fc3d2855 ""
   ".texmf-var/luatex-cache/generic/fonts/otl/haranoajimincho-regular.luc" 1790674638 2011205 08efe1b7c7047672c13813eed57a8d56 ""
   ".texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1790674651 81829 677373c10fbc801af36e074aad9a99f6 ""
@@ -47,7 +47,7 @@
   ".texmf-var/luatexja/ltj-cid-auto-adobe-japan1.luc" 1790674597 1643763 110050834c06b725e065c20dae7a4eae ""
   ".texmf-var/luatexja/ltj-jisx0208.luc" 1790662495 93919 3545f967e0ab307c2cc8c3e8cb314d7c ""
   ".texmf-var/luatexja/ltj-kinsoku_default.luc" 1790662495 17654 bbcb9edafee384e2db436fe71e2bf5a1 ""
-  "SICE-SI_manuscript.tex" 1790675864 35562 8b6ab462ec7e42c1d1ad4ea9a5c06633 ""
+  "SICE-SI_manuscript.tex" 1790743935 32242 7b700a1b634b890b42be5a608d35bbf2 ""
   "c:/Users/okamo/SI/SI2026/.texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1790662495 459853 ee41d1f60875dcbe2f0d172bc5169b3d ""
   "c:/Users/okamo/SI/SI2026/.texmf/fonts/opentype/public/newtx/TeXGyreTermesX-Bold.otf" 1790662495 209828 4795014c911e9e756949c8a471b35c95 ""
   "c:/Users/okamo/SI/SI2026/.texmf/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf" 1790662496 226088 ba370b3a8da1d47380182d6837045e2c ""
@@ -329,13 +329,13 @@
   "figures/Meta_PointC2.pdf" 1790662497 281745 937682efc7858837a5d8ffa814818c05 ""
   "figures/Meta_method_image.pdf" 1790662497 133459 a46e6ca81fba42af12f842f235984ca9 ""
   "figures/Meta_method_image2.pdf" 1790662497 88989 921a00da9226e1517aefa23cd391ddfe ""
-  "figures/Method1.pdf" 1790662497 730634 1cc922db984b9142f44ec40c4c5af155 ""
-  "figures/Method2.pdf" 1790662497 760337 68cb2a5bfe16e3f57527debc06c09c3c ""
   "figures/Prior_Post_Rviz.pdf" 1790662497 59041 16ebbd7f4cfd1b68095f0a9b8a177b33 ""
   "figures/Prior_Post_Rviz2_big.pdf" 1790662497 40403 16b6231256047b3c93229723262ffa59 ""
   "figures/Prior_Post_gazebo.pdf" 1790662497 71827 812778f63788ea5cbe99d5f95fb34f9c ""
   "figures/System2.pdf" 1790674046 878374 9fdf380b8ff0321d6db20d4ee10efe19 ""
   "figures/physics1.pdf" 1790662497 1925223 45f488e107a0de463a10380b16ea415d ""
+  "figures/post_P.pdf" 1790742391 4435353 3829853fd896f4e80111c84195dd03b8 ""
+  "figures/pred_P.pdf" 1790742387 4762794 593d1b03eb62ac4fe8078bb1877ffb60 ""
   "sice-si.cls" 1790662497 7162 b14d29dc86d59c3de16ba8980d599f6c ""
   "sice.bbx" 1790662497 1943 efb18ad9e7821e759a16eaaacb8661cf ""
   "sice.cbx" 1790662497 1594 34993a270e6e3a56b5cd14e8c03a1c62 ""

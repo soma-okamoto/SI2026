@@ -1,0 +1,25 @@
+{
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.outDir": "%DIR%/.manuscript-build",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (manuscript)",
+      "tools": [
+        "latexmk-manuscript"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-manuscript",
+      "command": "latexmk",
+      "args": [
+        "-cd",
+        "-norc",
+        "-r",
+        "%DIR%/manuscript.latexmkrc",
+        "%DOC%"
+      ]
+    }
+  ]
+}
