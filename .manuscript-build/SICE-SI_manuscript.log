@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.9.22)  1 OCT 2026 18:20
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.9.22)  1 OCT 2026 20:25
  restricted system commands enabled.
  file:line:error style messages enabled.
 **SICE-SI_manuscript.tex
@@ -2301,16 +2301,16 @@ Package luatex.def Info: figures/Prior_Post_Rviz.pdf  used on input line 368.
 [3<./figures/Prior_Post_gazebo.pdf><./figures/Prior_Post_Rviz.pdf>]
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/sc' will be
-(Font)              scaled to size 10.0pt on input line 458.
+(Font)              scaled to size 10.0pt on input line 461.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
-(Font)              No change on input line 458.
+(Font)              No change on input line 461.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
-(Font)              No change on input line 458.
+(Font)              No change on input line 461.
 LaTeX Font Info:    Kanji font shape `JY3/HaranoAjiMincho-Regular.otf(0)/m/sc' 
 undefined
-(Font)              No change on input line 458.
+(Font)              No change on input line 461.
 
 
 [4] (./.manuscript-build/SICE-SI_manuscript.aux)
@@ -2341,7 +2341,7 @@ Here is how much of LuaTeX's memory you used:
    12 hlist, 2 vlist, 6 rule, 2 glue, 64 kern, 6 sub_mlist, 2 glyph, 499 attribu
 te, 66 glue_spec, 62 attribute_list, 1 write, 15 user_defined, 1 pdf_action node
 s
-   avail lists: 1:23,2:82844,3:1233,4:832,5:1118,6:108,7:12270,8:42,9:4493,10:26
+   avail lists: 1:23,2:82877,3:1233,4:832,5:1118,6:108,7:12270,8:42,9:4493,10:26
 ,11:453
  55814 multiletter control sequences out of 65536+600000
  185 fonts using 98183959 bytes
@@ -2364,7 +2364,7 @@ le/sample/.texmf/fonts/type1/public/newtx/txmiaX.pfb><c:/Users/soma0/Downloads/s
 ample/sample/.texmf/fonts/type1/public/newtx/txsym.pfb><c:/Users/soma0/Downloads
 /sample/sample/.texmf/fonts/type1/public/newtx/txsys.pfb><c:/Users/soma0/Downloa
 ds/sample/sample/.texmf/fonts/type1/public/newtx/ztmr.pfb>
-Output written on SICE-SI_manuscript.pdf (4 pages, 12395922 bytes).
+Output written on SICE-SI_manuscript.pdf (4 pages, 12395940 bytes).
 
 PDF statistics: 330 PDF objects out of 1000 (max. 8388607)
  270 compressed objects within 3 object streams
