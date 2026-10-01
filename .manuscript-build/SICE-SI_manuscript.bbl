@@ -126,36 +126,5 @@
     \field{journaltitle}{Sensors}
     \field{year}{2023}
   \endentry
-
-  \entry{nawa2024kld_multivariate}{article}{}{}
-    \name{author}{2}{}{%
-      {{hash=NV}{%
-         family={Nawa},
-         familyi={N\bibinitperiod},
-         given={Victor},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=NS}{%
-         family={Nadarajah},
-         familyi={N\bibinitperiod},
-         given={Saralees},
-         giveni={S\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{NVNS1}
-    \strng{fullhash}{NVNS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \verb{doi}
-    \verb 10.3390/e26080663
-    \endverb
-    \field{eid}{663}
-    \field{number}{8}
-    \field{title}{Exact Expressions for Kullback--Leibler Divergence for
-  Multivariate and Matrix-Variate Distributions}
-    \field{volume}{26}
-    \field{journaltitle}{Entropy}
-    \field{year}{2024}
-  \endentry
 \enddatalist
 \endinput

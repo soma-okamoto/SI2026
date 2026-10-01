@@ -11283,7 +11283,7 @@ return {
     ["zero"]=146,
    },
   },
-  ["filename"]="c:/Users/okamo/SI/SI2026/.texmf/fonts/opentype/public/newtx/TeXGyreTermesX-Italic.otf",
+  ["filename"]="c:/Users/soma0/Downloads/sample/sample/.texmf/fonts/opentype/public/newtx/TeXGyreTermesX-Italic.otf",
   ["foundtables"]={ "cff", "cmap", "gdef", "gpos", "gsub", "head", "hhea", "hmtx", "maxp", "name", "os/2", "post" },
   ["markclasses"]={
    [0]={
@@ -28202,5 +28202,5 @@ return {
   },
  },
  ["tableversion"]=0.004,
- ["time"]=1790662495,
+ ["time"]=1790316903,
 }

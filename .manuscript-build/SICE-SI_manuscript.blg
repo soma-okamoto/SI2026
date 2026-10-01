@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2024)
+This is BibTeX, Version 0.99d (TeX Live 2025)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: SICE-SI_manuscript.aux
 The style file: biblatex.bst
@@ -19,47 +19,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: SICE-SI_manuscript-blx.bib
 Database file #2: manuscript_references.bib
-Biblatex version: 3.20
+Biblatex version: 3.21
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 5 entries,
+You've used 4 entries,
             6402 wiz_defined-function locations,
-            1237 strings with 9901 characters,
-and the built_in function-call counts, 32359 in all, are:
-= -- 2574
-> -- 470
-< -- 81
-+ -- 1002
-- -- 191
-* -- 2220
-:= -- 4015
+            1229 strings with 9708 characters,
+and the built_in function-call counts, 26341 in all, are:
+= -- 2132
+> -- 371
+< -- 60
++ -- 823
+- -- 151
+* -- 1804
+:= -- 3346
 add.period$ -- 0
-call.type$ -- 5
-change.case$ -- 28
+call.type$ -- 4
+change.case$ -- 21
 chr.to.int$ -- 42
-cite$ -- 8
-duplicate$ -- 3417
-empty$ -- 2777
-format.name$ -- 277
-if$ -- 6406
+cite$ -- 6
+duplicate$ -- 2719
+empty$ -- 2244
+format.name$ -- 214
+if$ -- 5200
 int.to.chr$ -- 0
-int.to.str$ -- 8
+int.to.str$ -- 6
 missing$ -- 0
-newline$ -- 157
-num.names$ -- 152
-pop$ -- 1501
+newline$ -- 127
+num.names$ -- 114
+pop$ -- 1154
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 44
 quote$ -- 0
-skip$ -- 725
+skip$ -- 561
 stack$ -- 0
-substring$ -- 4721
-swap$ -- 581
-text.length$ -- 111
+substring$ -- 3983
+swap$ -- 444
+text.length$ -- 88
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 158
+type$ -- 124
 warning$ -- 0
-while$ -- 520
+while$ -- 433
 width$ -- 0
-write$ -- 153
+write$ -- 124
